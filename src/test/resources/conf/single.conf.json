@@ -4,8 +4,9 @@
   "key": "BROWSERSTACK_ACCESS_KEY",
 
   "capabilities": {
-    "build": "testng-browserstack",
-    "name": "single_test",
+    "project": "Test Run",
+    "build": "Support Automate",
+    "name": "Azure_single_test",
     "browserstack.debug": true
   },
 
