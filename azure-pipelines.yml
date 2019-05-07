@@ -11,3 +11,8 @@ steps:
     echo Starting the build
     mvn test -P single
   displayName: 'Build with Maven'
+  
+- task: BrowserStackConfig@0
+  inputs:
+    browserstackLocal: true
+    bsLocalOptions: '--force-local'
