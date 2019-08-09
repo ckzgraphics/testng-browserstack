@@ -14,5 +14,4 @@ steps:
   
 - task: BrowserStackConfig@0
   inputs:
-    browserstackLocal: true
-    bsLocalOptions: '--force-local'
+    BrowserStackServiceEndPoint: 'BrowserStack Connection'
