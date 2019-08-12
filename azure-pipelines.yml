@@ -17,6 +17,6 @@ steps:
     echo Starting the build
     mvn clean
     mvn compile
-    mvn test -P single
+    mvn test -P parallel
   displayName: 'Build with Maven'
 - task: BrowserStackResults@0
