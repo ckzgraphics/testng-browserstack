@@ -10,13 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: BrowserStackCCKKConfig@0
+- task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'CCKK Bstack'
+    BrowserStackServiceEndPoint: 'BStack'
 - script: |
     echo Starting the build
     mvn clean
     mvn compile
     mvn test -P parallel
   displayName: 'Build with Maven'
-- task: CCKK BrowserStackResults CCKK @0
+- task: BrowserStackResults@0
