@@ -12,7 +12,7 @@ pool:
 steps:
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'BrowserStack Connection'
+    BrowserStackServiceEndPoint: 'CC BSTACK'
 - script: |
     echo Starting the build
     mvn clean
