@@ -10,9 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BStack'
 - script: |
     echo Starting the build
     mvn clean
     mvn compile
     mvn test -P parallel
   displayName: 'Build with Maven'
+- task: BrowserStackResults@0
