@@ -10,10 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
 - task: BrowserStackConfig@1
   inputs:
-    BrowserStackServiceEndPoint: 'Bstack'
+    BrowserStackServiceEndPoint: 'Bs'
 - script: |
     echo Starting the build
     mvn clean
