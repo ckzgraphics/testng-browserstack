@@ -58,9 +58,15 @@ public class BrowserStackTestNGTest {
 
         if (capabilities.getCapability("browserstack.local") != null
                 && capabilities.getCapability("browserstack.local") == "true") {
+            
+            int randomRange = (99999 - 10000) + 1;
+            String localIdentifier = "localIdentifier_" + (int)((Math.random() * randomRange) + 10000);
+            capabilities.setCapability("browserstack.localIdentifier", localIdentifier);
+            
             l = new Local();
             Map<String, String> options = new HashMap<String, String>();
             options.put("key", accessKey);
+            options.put("localIdentifier", localIdentifier);
             l.start(options);
         }
 
