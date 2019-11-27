@@ -8,7 +8,8 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
+- task: BrowserStackConfig@0
+  inputs:
 steps:
 - task: Maven@3
   inputs:
